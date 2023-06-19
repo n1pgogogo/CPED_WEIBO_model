@@ -185,7 +185,7 @@ for epoch in range(epochs):
         if dev_loss < best_dev_loss:
             best_dev_loss = dev_loss
             early_stop_counter = 0
-            with open("README.md", "w", encoding="utf-8") as f:
+            with open("acc.md", "w", encoding="utf-8") as f:
                 f.write(f"N: {N} E: {E} O: {O} A: {A} C: {C}")
             torch.save(model_cnn.state_dict(), "model/best_model.pt")
         else:
